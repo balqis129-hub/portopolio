@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+   /* Reset */
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.logo {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 53px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  box-sizing: border-box;
+  width: 90px;
+  height: 40px;
+  border-radius: 30px;
+  color: white;
+  background-color: #25344F;
+  border: 1px solid black;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+  align-items: flex-start;
+}
+
+.about-content {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.about-card {
+  background-color: #25344F;
+  color: white;
+  padding: 20px;
+  border-left: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  line-height: 1.8;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 30px 5%;
+  }
+
+  .about-content {
+    margin-left: 0;
+  }
+
+  .about-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px 5%;
+  }
+
+  .about-content {
+    margin-left: 0;
+  }
+
+  .about-card {
+    padding: 15px;
+  }
+
+  .about-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .about-section {
+    padding: 10px 5%;
+  }
+
+  .about-card {
+    padding: 10px;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-card p {
+    font-size: 12px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-removebg-preview.png" alt="Logo">
+      <span>MY studio</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about_me.html">About me</a></li>
+        <li><a href="skill.html">Skill</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="about-section">
+      <div class="about-content">
+        <div class="about-card">
+          <h3>About me</h3>
+          <p>
+            Perkenalkan, nama saya Balqis Hanifa, saya berasal dari Desa Haurgeulis. Alasan saya memilih jurusan Rekayasa Perangkat Lunak (RPL) adalah karena saya tertarik dengan dunia teknologi, khususnya dalam pengembangan software dan aplikasi. Saya ingin belajar lebih banyak tentang pemrograman, desain sistem, dan teknologi komputer agar bisa menjadi seorang programmer atau pengembang aplikasi profesional di masa depan. Saya juga berharap dapat mengembangkan keterampilan saya di sini dan bekerja sama dengan teman-teman untuk mencapai tujuan bersama.
+        </div>
+        <div class="about-card">
+          <h3>Riwayat sekolah</h3>
+          <p>
+            Saya memulai pendidikan di SDN Haurgeulis di tahun 2014 hingga 2020. Setelah itu, saya melanjutkan ke SMPN 2 Maja dari tahun 2020 hingga 2023. Kini, saya bersekolah di SMKN 1 Maja jurusan Rekayasa Perangkat Lunak (RPL) dengan harapan dapat memperdalam minat saya di bidang teknologi dan pengembangan perangkat lunak.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

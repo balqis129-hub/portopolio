@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body,
+        h1,
+        p,
+        ul,
+        li,
+        a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #e6f0ff;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+        }
+
+        .logo {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 53px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            box-sizing: border-box;
+            width: 90px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: #25344F;
+            border: 1px solid black;
+            color: white;
+        }
+
+        .contact-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: flex;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 28px;
+            color: #25344F;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 25px 5%;
+            padding-left: 20px;
+            margin: auto;
+            margin-left: auto;
+            border-radius: 10px;
+            border: 1px solid #25344F;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #25344F;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #25344F;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .contact-form button {
+            background-color: #25344F;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #25344F;
+        }
+
+        /* Footer Layout */
+        footer {
+            background-color: #25344F;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .copyright {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        footer .social-icons a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(229, 229, 229, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            background-color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        footer .social-icons img {
+            width: 25px;
+            height: 25px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            nav ul li {
+                margin-left: 20px;
+            }
+
+            .contact-section {
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+
+            .contact-info,
+            .contact-form {
+                flex: none;
+                width: 100%;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 10%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-section {
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .contact-info h2 {
+                font-size: 24px;
+            }
+
+            .contact-form button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .contact-info h2 {
+                font-size: 20px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .social-icons {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            footer .copyright {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo-removebg-preview.png" alt="Logo">
+            <span>MY studio</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_me.html">About me</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contact-section" id="contact">
+        <div class="contact-info">
+            <h2>Kontak Saya</h2>
+            <p>
+                Silakan tuliskan pesan Anda pada kolom yang tersedia. Pesan Anda akan diproses
+                dan ditindaklanjuti secepat mungkin. Terima kasih atas perhatian dan kerja sama Anda!
+            </p>
+        </div>
+        <div class="contact-form">
+            <form action="mailto:balqishanifa50@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Nama Anda</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama">
+
+                <label for="email">E-mail Anda</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email">
+
+                <label for="message">Pesan Anda</label>
+                <textarea id="message" name="message" placeholder="Masukkan pesan"></textarea>
+
+                <a href="kirim.html" class="btn btn-secondary btn-lg">Kirim</a>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">©Copyright - portofolio - balqis</p>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/balqishnfa?igsh=bGR5M3ZoejJsb2I=" target="_blank">
+                    <img src="instagram logo.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/6285150980068" target="_blank">
+                    <img src="whatsapp1.svg" alt="WhatsApp">
+                </a>
+                <a href="https://github.com/balqis129-hub" target="_blank">
+                    <img src="github1.svg" alt="github">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
